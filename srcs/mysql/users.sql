@@ -1,0 +1,4 @@
+GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'pma'@'%' IDENTIFIED BY 'aitfaska98';
+CREATE USER 'square'@'%' IDENTIFIED BY 'aitfaska98';
+GRANT ALL PRIVILEGES ON *.* TO 'square'@'%';
+FLUSH PRIVILEGES;
