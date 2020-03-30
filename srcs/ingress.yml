@@ -20,6 +20,10 @@ spec:
         backend:
           serviceName: wordpress
           servicePort: 5050
+      - path: /grafana
+        backend:
+          serviceName: grafana
+          servicePort: 3000
       - path: /ftps
         backend:
           serviceName: ftps
