@@ -18,7 +18,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 300Mi
+      storage: 500Mi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -28,7 +28,7 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 200Mi
+    storage: 500Mi
   accessModes:
     - ReadWriteOnce
   hostPath:

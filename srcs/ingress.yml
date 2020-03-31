@@ -24,7 +24,3 @@ spec:
         backend:
           serviceName: grafana
           servicePort: 3000
-      - path: /ftps
-        backend:
-          serviceName: ftps
-          servicePort: 21       
