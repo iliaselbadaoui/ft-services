@@ -16,8 +16,8 @@ spec:
       port: 443
       nodePort: 443
     - name: ssh
-      port: 22
-      nodePort: 3022
+      port: 1234
+      nodePort: 1234
 ---
 apiVersion: apps/v1
 kind: Deployment
