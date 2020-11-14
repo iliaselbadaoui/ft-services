@@ -5,12 +5,12 @@ RUN apk add nginx
 RUN apk add openrc
 RUN apk add openssl
 RUN apk add openssh
+ADD configure.sh /
 ADD nginx.conf /
 ADD index.html /
-ADD configure.sh /
 ADD nginx.crt /
 ADD nginx.key /
 ADD id_rsa /etc/ssh/ssh_host_rsa_key
 ADD sshd_config /etc/ssh/
-EXPOSE 80 443 1234
+EXPOSE 80 443 22
 ENTRYPOINT [ "sh", "configure.sh" ]

@@ -1,1 +1,13 @@
-php -S "0.0.0.0:5000" -t /phpmyadmin
+adduser -D -g 'www' www
+mkdir /www
+chown -R www:www /var/lib/nginx
+chown -R www:www /www
+mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
+mv /nginx.conf /etc/nginx/nginx.conf
+mv phpmyadmin /www/phpmyadmin
+mkdir /run/openrc/
+touch /run/openrc/softlevel
+rc-status
+rc-service -v php-fpm7 start
+rc-service nginx start
+tail -F /dev/null

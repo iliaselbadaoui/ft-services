@@ -3,11 +3,13 @@ kind: Service
 metadata:
   name: mysql
 spec:
+  type: ClusterIP
   clusterIP: 10.99.99.99
   selector:
     app: mysql
   ports:
       - port: 3306
+        targetPort: 3306
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -28,7 +30,7 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 500Mi
+    storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:

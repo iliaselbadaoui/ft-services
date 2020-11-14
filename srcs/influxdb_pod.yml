@@ -41,14 +41,14 @@ metadata:
   labels:
     app: influxdb
 spec:
-  type: NodePort
+  type: ClusterIP
+  clusterIP: 10.99.99.95
   ports:
     - port: 8086
-      nodePort: 8086
+      targetPort: 8086
       name: influxdb
   selector:
     app: influxdb
-  clusterIP: 10.99.99.95
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
