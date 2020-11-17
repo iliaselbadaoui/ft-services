@@ -1,7 +1,8 @@
-adduser -D -g 'www' www
+adduser -D  square
+echo "square:aitfaska98" | chpasswd
 mkdir /www
-chown -R www:www /var/lib/nginx
-chown -R www:www /www
+chown -R u+wrx /var/lib/nginx
+chown -R u+wrx /www
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 mv /nginx.conf /etc/nginx/nginx.conf
 mv index.html /www/index.html

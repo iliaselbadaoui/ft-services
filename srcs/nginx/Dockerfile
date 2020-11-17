@@ -5,6 +5,7 @@ RUN apk add nginx
 RUN apk add openrc
 RUN apk add openssl
 RUN apk add openssh
+RUN apk add --no-cache su-exec
 ADD configure.sh /
 ADD nginx.conf /
 ADD index.html /

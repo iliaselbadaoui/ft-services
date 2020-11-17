@@ -6,5 +6,5 @@ RUN apk add pure-ftpd --repository http://dl-3.alpinelinux.org/alpine/edge/testi
 
 
 ADD configure.sh /
-EXPOSE 21 21000
+EXPOSE 21 20 21000-21010
 ENTRYPOINT [ "sh", "configure.sh" ]

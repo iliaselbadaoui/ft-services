@@ -1,10 +1,5 @@
 if [[ $(minikube status | grep -c "Running") == 0 ]]
 then
-    # if [[ $(docker-machine status | grep -c "Stopped") == 1 ]]
-    # then
-    #     docker-machine start
-    #     eval $(docker-machine env default)
-    # fi
     minikube start --extra-config=apiserver.service-node-port-range=1-35000
     minikube addons enable metrics-server
     minikube addons enable dashboard
