@@ -5,7 +5,7 @@ chmod 600 /etc/ssl/private/pure-ftpd.pem
 
 adduser -D $USER
 echo "$USER:$PASSWORD" | chpasswd
-/usr/sbin/pure-ftpd -j -Y 2  -p 21000:21010 -P "192.168.99.185"
+/usr/sbin/pure-ftpd -j -Y 2  -p 21000:21010 -P "IPS"
 # -j create home directory if not existe
 # -Y behavior : 2 meanes accept only connections using tls
 # -p passiveport range
