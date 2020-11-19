@@ -2,9 +2,9 @@ adduser -D -g 'www' www
 mkdir /www
 chown -R www:www /var/lib/nginx
 chown -R www:www /www
-mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
-mv /nginx.conf /etc/nginx/nginx.conf
-mv phpmyadmin /www/phpmyadmin
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
+cp /nginx.conf /etc/nginx/nginx.conf
+cp -a phpmyadmin /www/phpmyadmin
 mkdir /run/openrc/
 touch /run/openrc/softlevel
 rc-status

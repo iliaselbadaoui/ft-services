@@ -26,6 +26,13 @@ spec:
             name: influxdb-pv-storage
           - mountPath: "/var/run/docker.sock"
             name: socket-docker
+          livenessProbe:
+            exec:
+              command:
+              - sh
+              - /dog.sh
+            initialDelaySeconds: 20
+            periodSeconds: 5
       volumes:
       - name: influxdb-pv-storage
         persistentVolumeClaim:

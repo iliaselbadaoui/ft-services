@@ -12,6 +12,7 @@ RUN mkdir /etc/telegraf \
 && rm -rf /var/cache/apk/*
 ADD configure.sh /
 ADD telegraf.conf /etc/telegraf/telegraf.conf
+ADD dog.sh /
 ADD influxdb.conf /
 EXPOSE 8086
 ENTRYPOINT [ "sh", "configure.sh" ]

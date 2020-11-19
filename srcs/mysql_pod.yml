@@ -53,6 +53,7 @@ spec:
         tier: mysql
     spec:
       restartPolicy: Always
+      
       containers:
       - name: mysql
         image: mysql
