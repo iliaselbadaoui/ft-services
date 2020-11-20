@@ -8,6 +8,7 @@ ADD pma.sql /
 ADD users.sql /
 ADD configure.sh /
 ADD mariadb-server.cnf /etc/my.cnf.d
+ADD dog.sh /
 VOLUME ["/var/lib/mysql"]
 EXPOSE 3306
 ENTRYPOINT [ "sh", "configure.sh" ]

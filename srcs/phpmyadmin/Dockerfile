@@ -11,6 +11,7 @@ RUN apk add php7-bcmath php7-gd php7-odbc php7-pdo_mysql php7-pdo_sqlite php7-ge
 RUN apk add php7-xmlrpc php7-bz2 php7-iconv php7-pdo_dblib php7-curl php7-ctype php7-session
 ADD nginx.conf /
 ADD phpmyadmin.tar.gz /
+ADD dog.sh /
 ADD config.inc.php phpmyadmin/
 ADD configure.sh /
 

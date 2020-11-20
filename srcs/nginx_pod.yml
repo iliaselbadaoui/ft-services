@@ -38,6 +38,13 @@ spec:
     spec:
       containers:
       - name: nginx
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - /dog.sh
+          initialDelaySeconds: 20
+          periodSeconds: 5
         image: nginx
         ports:
           - containerPort: 80

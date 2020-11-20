@@ -1,6 +1,6 @@
 if [[ $(ps | grep -v "grep" | grep -c "pure-ftpd") == 0 ]]
 then
-	cat dog_bark
+	exit 1
 else
-	echo hello
+	exit 0
 fi
